@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/tx_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textAlignment="center"
+        android:textSize="@dimen/tx_title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="150dp"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/ed_numberIn"
+        android:layout_width="350dp"
+        android:layout_marginRight="@dimen/m_md"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_sm"
+        android:textSize="@dimen/tx_normal"
+        android:layout_marginLeft="@dimen/m_md"
+        android:textDirection="rtl"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tx_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="0"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/sp_convertidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m_md"
+        android:layout_marginTop="@dimen/m_md"
+        android:contextClickable="true"
+        app:layout_constraintEnd_toStartOf="@id/bt_convertir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_numberIn"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/bt_convertir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertir"
+        android:layout_marginTop="@dimen/m_sm"
+        android:textSize="@dimen/tx_normal"
+        app:layout_constraintTop_toBottomOf="@id/ed_numberIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sp_convertidor"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/ed_numberOut"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_md"
+        android:textSize="@dimen/tx_normal"
+        android:textDirection="rtl"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="none"
+        android:layout_marginRight="@dimen/m_md"
+        android:layout_marginLeft="@dimen/m_md"
+        app:layout_constraintStart_toEndOf="@id/bt_minus"
+        app:layout_constraintTop_toBottomOf="@id/bt_convertir"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="0"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/bt_plus"
+        android:layout_marginTop="@dimen/m_lg"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/m_md"
+        android:textSize="@dimen/tx_subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sp_convertidor"
+        android:text="+"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/bt_minus"
+        android:layout_marginTop="@dimen/m_lg"
+        android:layout_width="60dp"
+        android:layout_marginLeft="@dimen/m_sm"
+        android:textSize="@dimen/tx_subtitle"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sp_convertidor"
+        app:layout_constraintStart_toEndOf="@id/bt_plus"
+        android:text="-"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        android:id="@+id/ed_numberResult"
+        android:layout_width="200dp"
+        android:layout_marginRight="@dimen/m_md"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/m_md"
+        android:textSize="@dimen/tx_normal"
+        android:layout_marginLeft="@dimen/m_md"
+        android:textDirection="rtl"
+        android:textIsSelectable="false"
+        android:focusable="false"
+        android:inputType="none"
+        app:layout_constraintTop_toBottomOf="@id/ed_numberOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="0"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/bt_result"
+        android:layout_marginTop="@dimen/m_sm"
+        android:layout_width="60dp"
+        android:layout_marginLeft="@dimen/m_md"
+        android:textSize="@dimen/tx_subtitle"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/bt_plus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ed_numberResult"
+        android:text="="
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/bt_clear"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Limpiar"
+        android:textSize="@dimen/tx_subtitle"
+        android:layout_marginTop="@dimen/m_md"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_numberResult"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
